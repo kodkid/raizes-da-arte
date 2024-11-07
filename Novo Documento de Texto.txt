@@ -1,7 +1,0 @@
-#Como colocar itens
-git add .
-git commit -m "meu commit"
-git push
-
-#Atualizar repositorio
-git pull

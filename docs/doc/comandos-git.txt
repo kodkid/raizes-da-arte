@@ -1,0 +1,38 @@
+# Comandos criar Repositorio
+echo "# AlugueAqui" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kodkid/AlugueAqui.git
+git push -u origin main
+
+# Push an existing repository from the command line
+
+git remote add origin https://github.com/kodkid/AlugueAqui.git
+git branch -M main
+git push -u origin main
+
+git add . # Adicionado mudanças no repositorio local
+git commit -m "Minha Mensagem" # Adiciona um novo commit"
+git push # Adiciona os commits para o repositorio remoto
+git checkout -- . # Apaga atualizações não commitados
+git pull # Atualiza o repositorio para o ultimo commit 
+git log # verifica todos os commits do repositorio
+git checkout -b nome-do-branch # Cria um novo branch
+git push origin nome-do-branch # Move o novo branch para o repositorio local
+git checkout nome-do-branch # Muda para o branch selecionado
+git merge novo-feature #Integra as alterações do branch para o projeto
+git branch -d novo-feature # Exclui o branch local
+git push origin --delete novo-feature # Exclui o Branch remoto
+git remote -v # Ver onde o repositorio ta sendo enviado
+git config --global user.name # Ver qual usuario esta configurado no git
+git config --global user.email # Ver qual email esta configurado no git
+git config --global user.name "Nome do usuario"
+git config --global user.email "Email do usuario"
+
+
+git reset --hard HEAD -- Apaga alterações não commitadas
+git checkout nome-da-branch # altera o branch
+
+
