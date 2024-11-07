@@ -1,2 +1,7 @@
+#Como colocar itens
 git add .
-git -m commit "bla bla"
+git commit -m "meu commit"
+git push
+
+#Atualizar repositorio
+git pull
