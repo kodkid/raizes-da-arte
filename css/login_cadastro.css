@@ -73,14 +73,18 @@ body {
     cursor: pointer;
     border-radius: 4px;
     align-self: center; 
-    transition: background-color 0.3s ease-in-out;
     margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .login-form button:hover {
-    background-color: #444;
+    background-color: #5D30B6;
+    transform: translateY(-3px);
 }
 
+.submit-btn:active {
+    transform: translateY(1px);
+}
 
 .register-link {
     margin-top: 10px;
@@ -95,5 +99,6 @@ body {
 
 .register-link a:hover {
     text-decoration: underline;
+    
 }
 

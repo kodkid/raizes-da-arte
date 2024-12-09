@@ -107,7 +107,7 @@ body {
 }
 
 .navbar .btn-cadastrar:hover {
-    background-color: #5D30B6; 
+    background-color: #0C3048; 
     color: #ffffff; 
     transform: translateY(-3px); 
 }
@@ -210,7 +210,7 @@ header .btn-container .btn {
 }
 
 header .btn-container .btn:hover {
-    background-color: #5D30B6;
+    background-color: #0C3048;
     transform: translateY(-3px);
 }
 
@@ -324,6 +324,7 @@ header .btn-container .btn:active {
     height: 50px;
     width: auto;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .social-icons {
