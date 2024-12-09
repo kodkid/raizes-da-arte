@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Perfil</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="navbar-logo" src="../img/logo2.png" alt="Logo">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="artistas.html">Comunidade</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="index.html">Sobre nós</a></li>
+            </ul>
+            </nav>
+         </header>
+    <header>
+        <img src="../img/barra-perfil.png" class="barra"  alt="barra">
+    </header>
+    
+    <section class="profile-container">
+        <div class="profile-header">
+            <div class="profile-image-wrapper">
+                <img src="../img/default-avatar.png" alt="Imagem do perfil" id="profile-img">
+                <label for="profile-pic" class="edit-photo-btn">Editar Foto</label>
+                <input type="file" id="profile-pic" accept="image/*" hidden>
+            </div>
+            <button type="submit" class="submit-btn">Salvar</button>
+        </div>
+        <form class="user-form" action="#" method="post">
+            <div class="form-columns">
+                
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone">
+                    </div>
+                </div>
+    
+                
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="ocupacacao">Ocupação:</label>
+                        <input type="text" id="ocupacacao" name="ocupacacao" placeholder="Digite sua área">
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">Cep:</label>
+                        <input type="text" id="cep" name="cep" placeholder="Digite seu cep">
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Biografia:</label>
+                        <input type="text" id="bio" name="bio" placeholder="Conte um pouco sobre você:">
+                        
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo-section">
+                <img src="path/to/logo.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+    
+    
+    
+</body>
+</html>

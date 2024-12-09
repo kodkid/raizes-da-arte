@@ -47,6 +47,7 @@ body {
     outline: none;
     width: 100%; 
     transition: border-color 0.3s ease-in-out;
+    margin-left: -4px;
 }
 
 .login-form input:focus {
