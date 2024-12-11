@@ -42,15 +42,17 @@ ALTER TABLE db_raizes_da_arte.user ADD CONSTRAINT fk_usuario_postagem FOREIGN KE
 REFERENCES db_raizes_da_arte.postagem(id);
 ALTER TABLE db_raizes_da_arte.postagem ADD CONSTRAINT fk_postagem_usuario FOREIGN KEY (idUsuario)
 REFERENCES db_raizes_da_arte.user(id);
-ALTER TABLE db_raizes_da_arte.user ADD CONSTRAINT fk_user_imagem FOREIGN KEY (idImagem)
-REFERENCES db_raizes_da_arte.imagem(id);
-ALTER TABLE db_raizes_da_arte.imagem ADD CONSTRAINT fk_imagem_user FOREIGN KEY (idUsuario)
-REFERENCES db_raizes_da_arte.user(id);
 ALTER TABLE db_raizes_da_arte.postagem ADD CONSTRAINT fk_postagem_imagem FOREIGN KEY (idImagem)
 REFERENCES db_raizes_da_arte.imagem(id);
 ALTER TABLE db_raizes_da_arte.imagem ADD CONSTRAINT fk_imagem_postagem FOREIGN KEY (idPostagem)
 REFERENCES db_raizes_da_arte.postagem(id);
-ALTER TABLE db_raizes_da_arte.comentario ADD CONSTRAINT fk_postagem_comentario FOREIGN KEY (idPostagem)
+ALTER TABLE db_raizes_da_arte.postagem_comentario ADD CONSTRAINT fk__comentarioPostagem_postagem FOREIGN KEY (idPostagem)
 REFERENCES db_raizes_da_arte.postagem(id);
-ALTER TABLE db_raizes_da_arte.postagem ADD CONSTRAINT fk_comentario_postagem FOREIGN KEY (idComentario)
+ALTER TABLE db_raizes_da_arte.postagem ADD CONSTRAINT fk__postagem_comentarioPostagem FOREIGN KEY (ID_POSTAGEM_COMENTARIO)
+REFERENCES db_raizes_da_arte.postagem_comentario(id);
+ALTER TABLE db_raizes_da_arte.comentario ADD CONSTRAINT fk__comentario_comentarioPostagem FOREIGN KEY (ID_POSTAGEM_COMENTARIO)
+REFERENCES db_raizes_da_arte.postagem_comentario(id);
+ALTER TABLE db_raizes_da_arte.postagem_comentario ADD CONSTRAINT fk__comentarioPostagem_comentario FOREIGN KEY (idComentario)
 REFERENCES db_raizes_da_arte.comentario(id);
+
+
