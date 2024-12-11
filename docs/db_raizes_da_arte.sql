@@ -2,19 +2,19 @@ DROP DATABASE IF EXISTS db_raizes_da_arte;
 CREATE DATABASE IF NOT EXISTS db_raizes_da_arte;
 
 CREATE TABLE IF NOT EXISTS db_raizes_da_arte.user(
-    id INTEGER PRIMARY KEY AUTO_INCREMENT ,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     idPostagem INTEGER,
-    idImagem INTEGER,
     nome INTEGER NOT NULL,
     email VARCHAR(50) NOT NULL,
     senha  VARCHAR(500),
     descricao TEXT,
-    imagemPerfil TEXT
+    imagemPerfil TEXT,
+    categoria VARCHAR(50)
 );
 CREATE TABLE IF NOT EXISTS db_raizes_da_arte.postagem(
-    id INTEGER PRIMARY KEY ,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT ,
     idUsuario INTEGER,
-    idComentario INTEGER,
+    ID_POSTAGEM_COMENTARIO INTEGER,
     idImagem INTEGER,
     curtida INTEGER,
     descricao TEXT,
@@ -22,14 +22,20 @@ CREATE TABLE IF NOT EXISTS db_raizes_da_arte.postagem(
 
 );
 CREATE TABLE IF NOT EXISTS db_raizes_da_arte.comentario(
-    id INTEGER PRIMARY KEY,
-    idPostagem INTEGER
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    ID_POSTAGEM_COMENTARIO INTEGER,
+    ID_USUARIO INTEGER
 );
 CREATE TABLE IF NOT EXISTS db_raizes_da_arte.imagem(
-    id INTEGER PRIMARY KEY,
-    idUsuario INTEGER,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     idPostagem INTEGER,
     urlImagem TEXT
+);
+CREATE TABLE IF NOT EXISTS db_raizes_da_arte.postagem_comentario(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    idPostagem INTEGER,
+    idComentario INTEGER,
+    dataHora DATE
 );
 
 ALTER TABLE db_raizes_da_arte.user ADD CONSTRAINT fk_usuario_postagem FOREIGN KEY (idPostagem)
