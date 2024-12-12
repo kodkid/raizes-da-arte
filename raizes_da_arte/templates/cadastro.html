@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Cadastro</title>
-    <link rel="stylesheet" href="../css/login_cadastro.css">
+    <link rel="stylesheet" href="{% static 'css/login_cadastro.css' %}">
 </head>
 <body>
     <div class="login-container">
-   
-        <img src="../img/r.png" alt="Logo" class="logo">
-        
-
+        <img src="{% static 'img/r.png' %}" alt="Logo" class="logo">
         <h1 class="login-title">Crie sua conta</h1>
 
-        
-        <form class="login-form">
+        <form class="login-form" method="POST" action="{% url 'cadastro' %}">
+            {% csrf_token %}
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Digite seu email" required>
             
@@ -23,11 +21,11 @@
             <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
             
             <label for="cep">Cep:</label>
-            <input type="cep" id="cep" name="cep" placeholder="Digite seu cep" required>
+            <input type="text" id="cep" name="cep" placeholder="Digite seu cep" required>
             
             <button type="submit">Registrar</button>
         </form>
-        <p class="register-link">Ja possui conta? <a href="login.html">Login</a></p>
+        <p class="register-link">Já possui conta? <a href="{% url 'login' %}">Login</a></p>
     </div>
 </body>
 </html>

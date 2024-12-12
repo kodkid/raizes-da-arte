@@ -1,59 +1,48 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raízes da Arte</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv3ZzCc5LK6S8X9+dsL2jYX+HJ6+10g1YzTQ0ZkW4fR2Z1vjbz5ZR2gVhW7" crossorigin="anonymous">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <img class="navbar-logo" src="../img/logo2.png" alt="Logo">
+            <img class="navbar-logo" src="{% static 'img/logo2.png' %}" alt="Logo">
             <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Comunidade</a></li>
-                <li><a href="">Eventos</a></li>
-                <li><a href="index.html">Sobre nós</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Comunidade</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="{% url 'index.html' %}">Sobre nós</a></li>
             </ul>
             <div class="navbar-buttons">
-                <div class="navbar-buttons">
-                    <button class="btn-nav" onclick="location.href='login.html'">Entrar</button>
-                    <button class="btn-cadastrar" onclick="location.href='cadastro.html'">Cadastrar-se</button>
-                </div>
-                
-                
+                <button class="btn-nav" onclick="location.href='{% url 'login' %}'">Entrar</button>
+                <button class="btn-cadastrar" onclick="location.href='{% url 'cadastro' %}'">Cadastrar-se</button>
             </div>
         </nav>
-        
-        
     </header>
 
     <header>
         <div class="text-container"> 
             <h1>Bem-vindo ao <br> Raízes da Arte</h1>
             <p>Somos um portal para artistas regionais independentes e <br>amantes da arte, promovendo a divulgação de trabalhos e <br>a criação de uma comunidade vibrante.</p>
-            <div class="btn-container">
-              
-            </div>
         </div>
-       
-        <img src="../img/quadoros.jpg" alt="quadro">
+        <img src="{% static 'img/quadoros.jpg' %}" alt="quadro">
     </header>
 
     <header class="header-2">
-        <img src="../img/BemVindos.png" alt="BemVindos">
+        <img src="{% static 'img/BemVindos.png' %}" alt="BemVindos">
         <div class="text-container-2"> 
             <h1>Nossa missão</h1>
             <p>Conectamos artistas e apreciadores, divulgando <br>eventos e notícias da região norte, além de permitir <br>interações entre os usuários para fortalecer a <br>comunidade artística. </p>
             <div class="btn-container">
-                <button type="button" class="btn btn-outline-secondary" onclick="location.href='cadastro.html'">Junte-se</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='{% url 'cadastro' %}'">Junte-se</button>
             </div>
         </div>
-       
-       
     </header>
 
     <section class="feed">
@@ -61,29 +50,28 @@
         <div class="feed-background">
             <div class="container-section">
                 <div class="container">
-                    <img src="../img/card1.png" alt="Descrição da imagem 1">
+                    <img src="{% static 'img/card1.png' %}" alt="Descrição da imagem 1">
                     <p>Divulgação de eventos</p>
                     <p class="p2">Promova seus eventos e alcance um público apaixonado pela arte.</p>
                 </div>
                 <div class="container">
-                    <img src="../img/card2.png"  alt="Descrição da imagem 2">
+                    <img src="{% static 'img/card2.png' %}"  alt="Descrição da imagem 2">
                     <p>Tutoriais e dicas</p>
                     <p class="p2">Aprenda novas técnicas e compartilhe seu conhecimento.</p>
                 </div>
                 <div class="container">
-                    <img src="../img/card3.png" alt="Descrição da imagem 3">
+                    <img src="{% static 'img/card3.png' %}" alt="Descrição da imagem 3">
                     <p>Interaja com a comunidade</p>
                     <p class="paragrafo">Comente e curta publicações de outros usuários. </p>
                 </div>
             </div>
-    
-       
         </div>
     </section>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="logo-section">
-                <img src="../img/rbranco.png" alt="Logo" class="footer-logo">
+                <img src="{% static 'img/rbranco.png' %}" alt="Logo" class="footer-logo">
             </div>
             <div class="social-icons">
                 <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -93,12 +81,7 @@
             </div>
         </div>
     </footer>
-    
-    
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0tISuD97fN4sqnXzSIkv5wX0b3Dq0FgD5i5OZ6gHhVe1lT2r" crossorigin="anonymous"></script>
 </body>
 </html>
-
-{% endblock %}
