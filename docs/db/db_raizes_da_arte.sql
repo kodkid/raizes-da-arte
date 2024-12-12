@@ -4,7 +4,7 @@ CREATE DATABASE IF NOT EXISTS db_raizes_da_arte;
 CREATE TABLE IF NOT EXISTS db_raizes_da_arte.user(
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     idPostagem INTEGER,
-    nome INTEGER NOT NULL,
+    nome VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
     senha  VARCHAR(500),
     descricao TEXT,
