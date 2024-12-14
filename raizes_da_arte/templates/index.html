@@ -20,8 +20,8 @@
                 <li><a href="{% url 'index.html' %}">Sobre nós</a></li>
             </ul>
             <div class="navbar-buttons">
-                <button class="btn-nav" onclick="location.href='{% url 'login' %}'">Entrar</button>
-                <button class="btn-cadastrar" onclick="location.href='{% url 'cadastro' %}'">Cadastrar-se</button>
+                <button class="btn-nav" onclick="javascript:window.location.href=`{% url 'login' %}`">Entrar</button>
+                <button class="btn-cadastrar" onclick="javascript:window.location.href=`{% url 'cadastro' %}`">Cadastrar-se</button>
             </div>
         </nav>
     </header>
@@ -40,7 +40,7 @@
             <h1>Nossa missão</h1>
             <p>Conectamos artistas e apreciadores, divulgando <br>eventos e notícias da região norte, além de permitir <br>interações entre os usuários para fortalecer a <br>comunidade artística. </p>
             <div class="btn-container">
-                <button type="button" class="btn btn-outline-secondary" onclick="location.href='{% url 'cadastro' %}'">Junte-se</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="javascript:window.location.href=`{% url 'cadastro' %}`">Junte-se</button>
             </div>
         </div>
     </header>
