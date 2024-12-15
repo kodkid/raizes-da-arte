@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Comunidade</a></li>
-                <li><a href="#">Eventos</a></li>
+                <li><a href="{% url 'eventos' %}">Eventos</a></li>
                 <li><a href="{% url 'index.html' %}">Sobre nós</a></li>
             </ul>
             <div class="navbar-buttons">
@@ -31,11 +31,11 @@
             <h1>Bem-vindo ao <br> Raízes da Arte</h1>
             <p>Somos um portal para artistas regionais independentes e <br>amantes da arte, promovendo a divulgação de trabalhos e <br>a criação de uma comunidade vibrante.</p>
         </div>
-        <img src="{% static 'img/quadoros.jpg' %}" alt="quadro">
+        <img src="{% static 'img/BemVindos.png' %}" alt="quadro">
     </header>
 
     <header class="header-2">
-        <img src="{% static 'img/BemVindos.png' %}" alt="BemVindos">
+        <img src="{% static 'img/quadoros.jpg' %}" alt="BemVindos">
         <div class="text-container-2"> 
             <h1>Nossa missão</h1>
             <p>Conectamos artistas e apreciadores, divulgando <br>eventos e notícias da região norte, além de permitir <br>interações entre os usuários para fortalecer a <br>comunidade artística. </p>

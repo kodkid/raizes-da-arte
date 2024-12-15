@@ -23,3 +23,8 @@ def perfil(request):
 def meu_perfil(request):
     return render(request, 'meu-perfil.html')
 
+def perfis(request):
+    return render(request, 'perfis.html')
+
+def eventos(request):
+    return render(request, 'eventos.html')

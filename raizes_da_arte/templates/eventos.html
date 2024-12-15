@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/eventos.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <img class="navbar-logo" src="{% static 'img/logo2.png' %}" alt="Logo">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Comunidade</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="{% url 'meu-perfil' %}">Meu Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <header>
+        <img src="{% static 'img/barra-perfil.png' %}" class="barra" alt="barra">
+    </header>
+
+   
+    <main class="events-container">
+        <h1 class="section-title">Eventos em Destaque</h1>
+        <div class="events-grid">
+          
+            <div class="event-card">
+                <img src="{% static 'img/card1.png' %}" alt="Evento 1" class="event-image">
+                <div class="event-info">
+                    <h2 class="event-title">Exposição de Arte Moderna</h2>
+                    <p class="event-description">Data: 20 de Outubro | Local: Museu da Cidade</p>
+                    <a href="#" class="event-button">Saiba mais</a>
+                </div>
+            </div>
+          
+            <div class="event-card">
+                <img src="{% static 'img/event2.png' %}" alt="Evento 2" class="event-image">
+                <div class="event-info">
+                    <h2 class="event-title">Workshop de Pintura</h2>
+                    <p class="event-description">Data: 25 de Outubro | Local: Galeria Central</p>
+                    <a href="#" class="event-button">Saiba mais</a>
+                </div>
+            </div>
+            
+            <div class="event-card">
+                <img src="{% static 'img/event3.jpg' %}" alt="Evento 3" class="event-image">
+                <div class="event-info">
+                    <h2 class="event-title">Feira de Fotografia</h2>
+                    <p class="event-description">Data: 30 de Outubro | Local: Praça Central</p>
+                    <a href="#" class="event-button">Saiba mais</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="{% static 'img/event4.jpg' %}" alt="Evento 4" class="event-image">
+                <div class="event-info">
+                    <h2 class="event-title">Sarau Literário</h2>
+                    <p class="event-description">Data: 5 de Novembro | Local: Biblioteca Pública</p>
+                    <a href="#" class="event-button">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo-section">
+                <img src="{% static 'img/rbranco.png' %}" alt="Logo" class="footer-logo">
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

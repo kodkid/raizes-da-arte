@@ -233,18 +233,18 @@ body {
 .user-form input,
 .user-form textarea {
     font-size: 14px;
-    border: 2px solid #ccc; /* Borda completa */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 10px; /* Espaçamento interno */
+    border: 2px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
     outline: none;
     width: 100%; 
-    transition: border-color 0.3s ease-in-out; /* Transição suave */
-    box-sizing: border-box; /* Inclui bordas no cálculo do tamanho */
+    transition: border-color 0.3s ease-in-out;
+    box-sizing: border-box; 
 }
 
 .user-form input:focus,
 .user-form textarea:focus {
-    border-color: #0C3048; /* Cor da borda no foco */
+    border-color: #0C3048; 
 }
 
 .user-form label {
@@ -253,7 +253,7 @@ body {
     line-height: 24px;
     text-align: left;
     color: #555;
-    display: block; /* Garante que fique acima do campo */
+    display: block; 
     margin-bottom: 5px; 
 }
 
@@ -269,7 +269,7 @@ body {
     bottom: 0;
 }
 
-/* Container do rodapé */
+
 .footer-container {
     width: 100%;
     display: flex;
@@ -279,7 +279,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* Logo do rodapé */
+
 .logo-section {
     display: flex;
     flex-direction: column;
@@ -293,7 +293,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Ícones sociais */
+
 .social-icons {
     display: flex;
     gap: 15px;
@@ -311,7 +311,6 @@ body {
     color: #5D30B6; 
 }
 
-/* Responsividade para dispositivos maiores que 768px */
 @media (max-width: 1024px) {
     .navbar ul {
         margin-left: 0;

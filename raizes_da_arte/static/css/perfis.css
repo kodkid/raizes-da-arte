@@ -138,32 +138,9 @@ body {
 }
 
 
-.btn-edit {
-    padding: 8px 16px;
-    background-color: #ffffff; 
-    color: rgb(0, 0, 0); 
-    border: 2px solid #0C3048; 
-    border-radius: 5px;
-    font-size: 0.9em; 
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    height: 40px;
-}
-
-.btn-edit:hover {
-    background-color: #0C3048; 
-    color: #ffffff; 
-    transform: translateY(-3px); 
-}
-
-.btn-edit:active {
-    transform: translateY(1px); 
-}
-
-
 .nova-postagem-btn {
     padding: 8px 16px;
-    background-color: #0C3048;
+    background-color: #5D30B6;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -220,7 +197,6 @@ body {
 }
 
 
-
 .modal {
     display: flex;
     justify-content: center;
@@ -232,16 +208,11 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    opacity: 0; 
-    transform: scale(0.8); 
-    transition: opacity 0.3s ease, transform 0.3s ease; 
 }
 
-.modal.visible {
-    opacity: 1; 
-    transform: scale(2); 
+.modal.hidden {
+    display: none;
 }
-
 
 .modal-content {
     background-color: white;
@@ -250,22 +221,7 @@ body {
     width: 400px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    opacity: 0; 
-    transform: translateY(-20px); 
-    transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
-.modal.visible .modal-content {
-    opacity: 1; 
-    transform: translateY(0);
-}
-
-
-.modal.hidden {
-    display: none;
-}
-
-
 
 .close-modal {
     font-size: 1.5rem;
@@ -368,7 +324,7 @@ body {
 
     .posts-section {
         width: 100%;
-        margin-left: 0;  
+        margin-left: 0;  /* Remove a margem para telas pequenas */
         justify-content: center;
     }
 }
