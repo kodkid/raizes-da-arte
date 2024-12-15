@@ -3,7 +3,7 @@ from django.shortcuts import render
 TEMPLATES = [
     {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': 'raizes_da_arte/template',
+    'DIRS': 'raizes_da_arte/templates',
     }
 ]
 
@@ -19,3 +19,7 @@ def cadastro(request):
 
 def perfil(request):
     return render(request, 'perfil.html')
+
+def meu_perfil(request):
+    return render(request, 'meu-perfil.html')
+

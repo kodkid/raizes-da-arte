@@ -130,7 +130,7 @@ body {
 }
 
 .btn-nav:hover {
-    background-color: #000000;
+   
     transform: translateY(-3px);
 }
 
