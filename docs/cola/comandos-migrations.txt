@@ -1,0 +1,7 @@
+1- Criar as migrações: python manage.py makemigrations
+2- Aplicar as migrações: python manage.py migrate
+3- Verificar migrações: python manage.py showmigrations
+4- Apaga as migrações existentes: rm -r raizes_da_arte/migrations
+5- reseta o banco de dados: python manage.py migrate raizes_da_arte zero
+6- cria uma nova pasta migrations no raizes_da_arte caso for deletada: python manage.py makemigrations --empty raizes_da_arte
+
