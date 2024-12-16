@@ -1,6 +1,7 @@
 from django.shortcuts import render , redirect
-# from django.contrib.auth.hashers import make_password 
+from django.contrib.auth.hashers import make_password 
 from django.contrib import messages  # Importando o sistema de mensagens
+from django.contrib.auth import authenticate, login
 from .models import User
 TEMPLATES = [
     {
@@ -23,7 +24,7 @@ def cadastro(request):
         senha = request.POST.get('password')
         cep = request.POST.get('cep')
         
-       # senha_hash = make_password(senha) 'Codigo para converter senha em hash'
+        senha_hash = make_password(senha) # 'Codigo para converter senha em hash'
         #Transformando os dados do usuario em um objeto chamado user
 
         # Verificando se o email já existe no banco
@@ -33,7 +34,7 @@ def cadastro(request):
         
         user = User.objects.create(  
             email=email,
-            senha=senha,
+            senha=senha_hash,
             cep=cep
         )
 
