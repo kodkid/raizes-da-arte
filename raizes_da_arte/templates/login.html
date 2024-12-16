@@ -22,6 +22,15 @@
             <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
 
             <button type="submit">Entrar</button>
+            {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            {% if message.tags == 'success' %}
+                <span style="color:green" class="success">{{ message }}</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}
         </form>
         <p class="register-link">Não tem uma conta? <a href="{% url 'cadastro' %}">Cadastre-se</a></p>
     </div>

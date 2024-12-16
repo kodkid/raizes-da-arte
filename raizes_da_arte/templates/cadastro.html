@@ -24,8 +24,18 @@
             <input type="text" id="cep" name="cep" placeholder="Digite seu cep" required>
             
             <button type="submit">Registrar</button>
+            {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            {% if message.tags == 'error' %}
+                <span style="color:red" class="error">{{ message }}</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}
         </form>
         <p class="register-link">Já possui conta? <a href="{% url 'login' %}">Login</a></p>
     </div>
+    <script src="{% static 'js/main_cadastro.js' %}"></script>
 </body>
 </html>
