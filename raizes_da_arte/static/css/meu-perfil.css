@@ -221,8 +221,9 @@ body {
 
 
 
+
 .modal {
-    display: flex;
+    display: none;  
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -230,16 +231,18 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);  
     z-index: 1000;
-    opacity: 0; 
-    transform: scale(0.8); 
-    transition: opacity 0.3s ease, transform 0.3s ease; 
+    opacity: 0;  
+    transform: scale(0.8);  
+    transition: opacity 0.3s ease, transform 0.3s ease;  
 }
 
+
 .modal.visible {
-    opacity: 1; 
-    transform: scale(2); 
+    display: flex;  
+    opacity: 1;  
+    transform: scale(1);  
 }
 
 
@@ -247,24 +250,19 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  
     text-align: center;
-    opacity: 0; 
+    opacity: 0;
     transform: translateY(-20px); 
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;  
 }
+
 
 .modal.visible .modal-content {
-    opacity: 1; 
-    transform: translateY(0);
+    opacity: 1;  
+    transform: translateY(0); 
 }
-
-
-.modal.hidden {
-    display: none;
-}
-
 
 
 .close-modal {
@@ -274,10 +272,12 @@ body {
     float: right;
 }
 
+
 .modal-content h2 {
     margin-bottom: 15px;
-    color: #0C3048;
+    color: #0C3048;  /
 }
+
 
 .form-group {
     display: flex;
@@ -301,8 +301,9 @@ body {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #5D30B6;
+    border-color: #5D30B6;  
 }
+
 
 .submit-btn {
     background-color: #5D30B6;
@@ -314,7 +315,7 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #4b258a;
+    background-color: #4b258a;  /
 }
 
 .footer {

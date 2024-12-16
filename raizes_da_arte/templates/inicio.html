@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raízes da Arte</title>
+
+    
+    {% load static %}
+
+   
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}" />
+
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+       
+        <img
+          class="navbar-logo"
+          src="{% static 'img/logo2.png' %}"
+          alt="Logo"
+        />
+        <ul>
+          <li><a href="meu-perfil.html">Perfil</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="index.html">Sobre nós</a></li>
+          <li><a href="#">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Conectando artistas e <br />amantes da arte</h1>
+        <p>Explore, compartilhe e apoie a arte em nossa plataforma.</p>
+        <a href="#" class="btn">+Nova postagem</a>
+      </div>
+    </section>
+
+    <section class="comunidade">
+      <h2><a href="comunidade.html">Feed →</a></h2>
+      <p>Descubra, divulgue e conecte-se com artistas e suas obras.</p>
+      <div class="grid">
+        <div class="card">
+        
+          <img src="https://via.placeholder.com/300x200" alt="Artista 1" />
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Artista 2" />
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Artista 3" />
+        </div>
+      </div>
+    </section>
+
+    <section class="eventos">
+      <h2><a href="eventos.html">Eventos →</a></h2>
+      <div class="event-grid">
+        <div class="event-card">
+          <img src="https://via.placeholder.com/300x150" alt="Evento 1" />
+          <div class="event-details">
+            <h3>Exposição de Arte</h3>
+            <p>Arte amazônica no Museu de Belas Artes...</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <img src="https://via.placeholder.com/300x150" alt="Evento 2" />
+          <div class="event-details">
+            <h3>Oficina de Escultura</h3>
+            <p>Transforme suas ideias em arte!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="logo-section">
+         
+          <img
+            src="{% static 'img/rbranco.png' %}"
+            alt="Logo"
+            class="footer-logo"
+          />
+        </div>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
