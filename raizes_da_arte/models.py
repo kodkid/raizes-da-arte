@@ -1,6 +1,6 @@
 from django.db import models
 
-
+'''
 class User(models.Model):
     postagens = models.ManyToManyField('Postagem', related_name='usuarios')
     nome = models.CharField(max_length=50 )
@@ -32,4 +32,4 @@ class Imagem(models.Model):
     urlImagem = models.TextField()  
     # Imagem da POSTAGEM :)
 
-
+'''

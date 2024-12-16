@@ -3,9 +3,9 @@ from django.db import models
 
 class User(models.Model):
     postagens = models.ManyToManyField('Postagem', related_name='usuarios')
-    nome = models.CharField(max_length=50)
-    email = models.EmailField(max_length=50)
-    senha = models.CharField(max_length=500)
+    nome = models.CharField(max_length=50 )
+    email = models.EmailField(max_length=50 )
+    senha = models.CharField(max_length=500 )
     descricao = models.TextField()
     categoria = models.CharField(max_length=50)
     imagem_perfil = models.FilePathField(path="/img") 
