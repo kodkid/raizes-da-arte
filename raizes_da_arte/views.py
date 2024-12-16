@@ -1,5 +1,6 @@
 from django.shortcuts import render , redirect
 # from django.contrib.auth.hashers import make_password 'importando codigo para converter senha em hash'
+from django.http import HttpResponse
 from .models import User
 TEMPLATES = [
     {
@@ -32,7 +33,7 @@ def cadastro(request):
 
         
         return redirect('sucesso')
-
+        return HttpResponse(f"Cadastro realizado com sucesso! Email: {email}, CEP: {cep}")
     return render(request, 'cadastro.html')
 
 def perfil(request):
