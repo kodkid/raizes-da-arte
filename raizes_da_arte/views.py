@@ -34,7 +34,7 @@ def cadastro(request):
         
         user = User.objects.create(  
             email=email,
-            senha=senha_hash,
+            senha_hash=senha,
             cep=cep
         )
 

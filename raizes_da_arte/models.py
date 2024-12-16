@@ -10,6 +10,7 @@ class User(models.Model):
     descricao = models.TextField()
     categoria = models.CharField(max_length=50)
     imagem_perfil = models.FilePathField(path="/img") 
+    
 
 
 class Postagem(models.Model):
