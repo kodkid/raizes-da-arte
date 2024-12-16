@@ -4,7 +4,7 @@ from django.db import models
 class User(models.Model):
     postagens = models.ManyToManyField('Postagem', related_name='usuario_postagem')
     nome = models.CharField(max_length=50 , null=True )
-    email = models.EmailField(max_length=50 )
+    email = models.EmailField(max_length=50 , unique=True ) #Email nao pode ser repetido
     senha = models.CharField(max_length=500 )
     cep = models.CharField(max_length=50) #Adicionado CEP 
     descricao = models.TextField()
