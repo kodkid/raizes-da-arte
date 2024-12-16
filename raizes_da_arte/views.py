@@ -25,16 +25,18 @@ def cadastro(request):
         cep = request.POST.get('cep')
         
         senha_hash = make_password(senha) # 'Codigo para converter senha em hash'
-        #Transformando os dados do usuario em um objeto chamado user
+        
+        
 
         # Verificando se o email já existe no banco
         if User.objects.filter(email=email).exists():
             messages.error(request, "Este email já está cadastrado.")
             return redirect('cadastro')  # Redireciona para a página de cadastro
         
+        #Transformando os dados do usuario em um objeto chamado user
         user = User.objects.create(  
             email=email,
-            senha_hash=senha,
+            senha=senha_hash,
             cep=cep
         )
 
