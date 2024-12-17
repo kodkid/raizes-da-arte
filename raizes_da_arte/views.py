@@ -72,3 +72,10 @@ def perfis(request):
 
 def eventos(request):
     return render(request, 'eventos.html')
+
+def inicio(request):
+    return render(request, 'inicio.html')
+
+
+
+    
