@@ -1,1 +1,8 @@
-/venv
+
+/venv/
+
+
+/raizes_da_arte/migrations/
+
+
+db.sqlite3
